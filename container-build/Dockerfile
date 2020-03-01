@@ -2,7 +2,7 @@
 FROM quay.io/redhattraining/httpd-parent
 EXPOSE 8080
 LABEL io.openshift.expose-services="8080:http" \
-	io.openshift.tags="apache, httpd: \
+	io.openshift.tags="apache, httpd" \
 	io.k8d.display-name="Apache HTTP Server" \
 	io.k8s.description="A basic Apache http server child image, use ONBUILD"
 RUN sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
